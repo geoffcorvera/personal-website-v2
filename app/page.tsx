@@ -1,4 +1,4 @@
-import LinkRow from "./components/link-row";
+import Header from "./components/header";
 
 function Links() {
   return (
@@ -96,7 +96,7 @@ function MyGridLayout() {
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <LinkRow />
+      <Header />
     </main>
   );
 }
