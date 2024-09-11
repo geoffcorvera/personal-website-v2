@@ -1,12 +1,8 @@
-interface JobDetails {
-    title: string;
-    company: string;
-    timePeriod: string;
-    description: string;
-}
+import { JobDetails } from "../fixtures/jobDetails";
+import Tag from "./tag";
 
-export default function Job({details}: {details: JobDetails}) {
-  const {title, company, timePeriod, description} = details;
+export default function Job({ details }: { details: JobDetails }) {
+  const { title, company, timePeriod, description, skills } = details;
 
   return (
     <div className="flex flex-row-reverse justify-end gap-4 py-4 mb-4 last:mb-0 hover:bg-slate-200">
@@ -16,11 +12,18 @@ export default function Job({details}: {details: JobDetails}) {
           <span>&#8212;</span>
           <h5 className="text-lg font-bold">{company}</h5>
         </div>
-        <p className="font-light text-slate-800 pt-1">{description}</p>
+        <p className="font-light text-slate-800 pt-2 pb-4">{description}</p>
+        {skills && (
+          <ul className="flex gap-2 flex-wrap">
+            {skills.map((skill) => (
+              <li>
+                <Tag name={skill} />
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
       <span className="min-w-32">{timePeriod}</span>
     </div>
   );
 }
-
-
