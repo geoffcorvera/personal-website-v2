@@ -1,42 +1,7 @@
 import Header from "./components/header";
 import Job from "./components/job";
 import Section from "./components/section";
-
-const jobDetails = [
-  {
-    title: "QA Engineer",
-    company: "IDEMIA",
-    timePeriod: "2021 - 2024",
-    description: `Created new test automation frameworks from scratch, used to speed
-    development of integration and end-to-end testing across multiple
-    web-based products. Developed and maintained 500+ integration, API,
-    and end-to-end test cases. Created functional tests for shared APIs,
-    increase code coverage across multiple teams and products. Integrated
-    test execution and reporting into CI/CD pipelines.`,
-  },
-  {
-    title: "QA & Accessibility Analyst",
-    company: "CollegeNET",
-    timePeriod: "2015 - 2020",
-    description: `Created new test automation frameworks from scratch, used to speed
-    development of integration and end-to-end testing across multiple
-    web-based products. Developed and maintained 500+ integration, API,
-    and end-to-end test cases. Created functional tests for shared APIs,
-    increase code coverage across multiple teams and products. Integrated
-    test execution and reporting into CI/CD pipelines.`,
-  },
-  {
-    title: "UX Researcher",
-    company: "CIBC",
-    timePeriod: "2014",
-    description: `Created new test automation frameworks from scratch, used to speed
-    development of integration and end-to-end testing across multiple
-    web-based products. Developed and maintained 500+ integration, API,
-    and end-to-end test cases. Created functional tests for shared APIs,
-    increase code coverage across multiple teams and products. Integrated
-    test execution and reporting into CI/CD pipelines.`,
-  },
-];
+import { jobs } from "./fixtures/jobDetails";
 
 const aboutCopy = `I help teams deploy reliable and usable software and interfaces through a combination of strategic test planning, automation, accessibility auditing and user experience research. The ways technology enables, or gets in our way, fascinates me. It’s a privilege to play a role in keeping software a positive aspect of people’s lives.`;
 
@@ -50,7 +15,7 @@ export default function Home() {
             <p className="text-lg font-light">{aboutCopy}</p>
           </Section>
           <Section name="Experience">
-            {jobDetails.map((job) => {
+            {jobs.map((job) => {
               return <Job key={job.title + job.company} details={job} />;
             })}
           </Section>

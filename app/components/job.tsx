@@ -1,9 +1,4 @@
-interface JobDetails {
-    title: string;
-    company: string;
-    timePeriod: string;
-    description: string;
-}
+import { JobDetails } from "../fixtures/jobDetails";
 
 export default function Job({details}: {details: JobDetails}) {
   const {title, company, timePeriod, description} = details;
