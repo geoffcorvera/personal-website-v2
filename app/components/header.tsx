@@ -4,12 +4,10 @@ const sections = ["about", "experience", "projects", "contact"];
 
 export default function Header() {
   return (
-    <header className="lg:flex lg:top-0 lg:flex-col justify-between lg:w-1/2 lg:max-w-lg lg:min-h-screen">
-      <div className="mt-16">
+    <header className="lg:flex lg:sticky lg:top-0 lg:flex-col justify-between w-1/2 lg:max-w-xl h-screen lg:min-h-screen">
+      <div className="lg:py-36">
         <h1 className="text-5xl font-bold">Geoffrey Corvera</h1>
-        <p className="text-xl font-semibold py-5 opacity-70">
-          QA Engineer
-        </p>
+        <p className="text-xl font-semibold py-5 opacity-70">QA Engineer</p>
         <p className="text-lg opacity-55">
           I help teams deliver reliable, accessible, and user-friendly.
         </p>
@@ -18,7 +16,10 @@ export default function Header() {
             {sections.map((section) => {
               return (
                 <li key={section}>
-                  <a href={`#${section.toLowerCase()}`} className="py-2 flex uppercase">
+                  <a
+                    href={`#${section.toLowerCase()}`}
+                    className="py-2 flex uppercase"
+                  >
                     {section}
                   </a>
                 </li>
