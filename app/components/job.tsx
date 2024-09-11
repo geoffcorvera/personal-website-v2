@@ -12,7 +12,7 @@ export default function Job({ details }: { details: JobDetails }) {
           <span>&#8212;</span>
           <h5 className="text-lg font-bold">{company}</h5>
         </div>
-        <p className="font-light text-slate-800 pt-2 pb-4">{description}</p>
+        <p className="font-light text-sm py-2 mb-4">{description}</p>
         {skills && (
           <ul className="flex gap-2 flex-wrap">
             {skills.map((skill) => (
