@@ -10,6 +10,12 @@ const config: Config = {
     extend: {
       backgroundImage: {},
     },
+    colors: {
+      white: "#FFF8EC",
+      soil: '#261F14',
+      cream: '#FFEFD7',
+      orange: '#D7890E'
+    }
   },
   plugins: [],
 };
