@@ -11,7 +11,7 @@ function SvgLink({
 }) {
   return (
     <a href={url} aria-label={ariaLabel}>
-      <span className="[&>svg]:h-7 [&>svg]:w-7">{children}</span>
+      <span className="[&>svg]:size-8">{children}</span>
     </a>
   );
 }
