@@ -28,7 +28,7 @@ export default function Header() {
           </ul>
         </nav>
       </div>
-      <div className="mb-16">
+      <div className="mb-36">
         <LinkRow />
       </div>
     </header>
