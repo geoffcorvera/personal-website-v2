@@ -16,7 +16,7 @@ export default function Job({ details }: { details: JobDetails }) {
         {skills && (
           <ul className="flex gap-2 flex-wrap">
             {skills.map((skill) => (
-              <li>
+              <li key={skill}>
                 <Tag name={skill} />
               </li>
             ))}
