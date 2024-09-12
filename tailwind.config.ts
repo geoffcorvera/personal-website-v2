@@ -11,12 +11,17 @@ const config: Config = {
       backgroundImage: {},
     },
     colors: {
-      current: 'currentColor',
+      current: "currentColor",
       white: "#FFF8EC",
-      soil: '#261F14',
-      cream: '#FFEFD7',
-      orange: '#D7890E'
-    }
+      soil: "#261F14",
+      cream: "#FFEFD7",
+      orange: "#D7890E",
+    },
+    fontFamily: {
+      serif: ['"New Kansas", "serif"', {
+        fontFeatureSettings: '"liga"'
+      }],
+    },
   },
   plugins: [],
 };
