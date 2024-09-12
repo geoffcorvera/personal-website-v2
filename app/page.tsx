@@ -3,13 +3,14 @@ import Job from "./components/job";
 import Section from "./components/section";
 import { jobs } from "./fixtures/jobDetails";
 
+const SECTIONS = ["about", "experience", "projects", "contact"];
 const aboutCopy = `I help teams deploy reliable and usable software and interfaces through a combination of strategic test planning, automation, accessibility auditing and user experience research. The ways technology enables, or gets in our way, fascinates me. It’s a privilege to play a role in keeping software a positive aspect of people’s lives.`;
 
 export default function Home() {
   return (
     <div className="mx-auto min-h-screen max-w-screen-xl">
       <div className="flex justify-between gap-4">
-        <Header />
+        <Header sections={SECTIONS} />
         <main className="min-h-fit w-1/2 flex flex-col gap-28 lg:pt-36 lg:pb-36">
           <Section name="About" showSectionTitle={false}>
             <p className="text-lg font-light">{aboutCopy}</p>

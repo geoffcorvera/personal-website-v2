@@ -1,8 +1,6 @@
 import LinkRow from "./link-row";
 
-const sections = ["about", "experience", "projects", "contact"];
-
-export default function Header() {
+export default function Header({ activeSection, sections }: { activeSection: string, sections: string[] }) {
   return (
     <header className="lg:flex lg:sticky lg:top-0 lg:flex-col justify-between w-1/2 lg:max-w-xl h-screen lg:min-h-screen">
       <div className="lg:py-36">
