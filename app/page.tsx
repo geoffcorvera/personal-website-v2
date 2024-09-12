@@ -32,7 +32,7 @@ export default function Home() {
     <div className="mx-auto min-h-screen max-w-screen-xl">
       <div className="flex justify-between gap-4">
         <Header activeSection={active} sections={SECTIONS} />
-        <main className="min-h-fit w-1/2 flex flex-col gap-28 lg:pt-36 lg:pb-36">
+        <main className="min-h-fit w-1/2 flex flex-col gap-32 lg:pt-36 lg:pb-36">
           <Section name="About" showSectionTitle={false}>
             <p className="text-lg font-light">{aboutCopy}</p>
           </Section>
